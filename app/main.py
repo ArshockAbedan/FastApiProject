@@ -27,6 +27,26 @@ async def root():
     return {"message": "Hello World"}
 
 
+# @app.get("/dummy_path/{item_id}")
+# def read_item(item_id: int, q: Union[str, None] = None):
+#     return {"item_id": item_id, "q": q}
+#
+#
+
+@app.post("/create/")
+async def create_item(item: Item):
+    return item
+
+
+# @app.get("check_model/{input_data}")
+# def check_model(input_data: str):
+#     # Recreate the exact same model, including its weights and the optimizer
+#     # new_model = tf.keras.models.load_model('my_model.h5')
+#     return type(input_data)
+#     # # converting list to array
+#     # arr = np.array(input_data)
+#     # return new_model.predict(arr)
+
 
 @app.post("/monthly_premium/")
 def create_upload_files(upload_file: UploadFile = File(...)):
@@ -37,7 +57,6 @@ def create_upload_files(upload_file: UploadFile = File(...)):
     except ... as err:
         rounded_expected_health_premium = "General Error!"
     return rounded_expected_health_premium
-
 
 # if __name__ == "__main__":
 #     # Opening JSON file
