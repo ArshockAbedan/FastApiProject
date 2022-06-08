@@ -1,0 +1,9 @@
+docker run -d --name mycontainer -p 80:80 areffastapi
+
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1/items/5?q=somequery
+Accept: application/json
+
+###
+

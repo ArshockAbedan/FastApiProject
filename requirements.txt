@@ -1,0 +1,11 @@
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn==0.17.6
+# tensorflow
+numpy
+pytest
+typing
+python-multipart
+# pypyr
+boto3
+python-dotenv
